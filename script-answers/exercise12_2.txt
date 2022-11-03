@@ -1,0 +1,15 @@
+Script started on 2022-11-03 15:47:06+02:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="130" LINES="22"]
+]0;roni@torni: ~/kurssit/fs-containers[01;32mroni@torni[00m:[01;34m~/kurssit/fs-containers[00m$ docker container run -it ubuntu bash
+[?2004h]0;root@752523b98b48: /root@752523b98b48:/# [K]0;root@752523b98b48: /root@752523b98b48:/# mkdir /usr/srx c/app
+[?2004l[?2004h]0;root@752523b98b48: /root@752523b98b48:/# touch /usr/sr/ c// app/index.js
+[?2004l[?2004h]0;root@752523b98b48: /root@752523b98b48:/# [Kll /usr/src/app/
+[?2004ltotal 8
+drwxr-xr-x 2 root root 4096 Nov  3 13:47 [0m[01;34m.[0m/
+drwxr-xr-x 1 root root 4096 Nov  3 13:47 [01;34m..[0m/
+-rw-r--r-- 1 root root    0 Nov  3 13:47 index.js
+[?2004h]0;root@752523b98b48: /root@752523b98b48:/# exit
+[?2004lexit
+]0;roni@torni: ~/kurssit/fs-containers[01;32mroni@torni[00m:[01;34m~/kurssit/fs-containers[00m$ exit
+exit
+
+Script done on 2022-11-03 15:47:59+02:00 [COMMAND_EXIT_CODE="0"]
