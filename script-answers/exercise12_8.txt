@@ -1,0 +1,112 @@
+Script started on 2022-12-13 13:24:58+02:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="90" LINES="72"]
+[1m[7m%[27m[1m[0m                                                                                          ]0;roni@torni: ~/kurssit/fs-containers/todo-app/todo-backend[0m[27m[24m[J[7m[36m ~/k/f/t/todo-backend [27m[36m[7m[32m[46m[49m  main [27m[32m[49m[32m[39m [K[?1h=[?1h=[?2004h[1m[31md[0m[39m[1m[31md[0m[39m[90mocker exec -it 74 bash[39m[22D[0m[33md[33mo[39m[1m[31md[1m[31mo[1m[31mc[0m[39m[1m[31mc[1m[31mk[0m[39m[1m[31mk[1m[31me[0m[39m[0m[32md[0m[32mo[0m[32mc[0m[32mk[0m[32me[32mr[39m[39m [39mc[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [15D[90montainer ls[39m[11D[39mo[39mn[39mt[39ma[39mi[39mn[39me[39mr[39m [39ml[39ms[?1l>[?2004l[?1l>
+CONTAINER ID   IMAGE     COMMAND                  CREATED        STATUS         PORTS                     NAMES
+7493b46b8610   mongo     "docker-entrypoint.s…"   19 hours ago   Up 9 minutes   0.0.0.0:3456->27017/tcp   todo-backend_mongo_1
+[1m[7m%[27m[1m[0m                                                                                          ]0;roni@torni: ~/kurssit/fs-containers/todo-app/todo-backend[0m[27m[24m[J[7m[36m ~/k/f/t/todo-backend [27m[36m[7m[32m[46m[49m  main [27m[32m[49m[32m[39m [K[?1h=[?1h=[?2004h[1m[31md[0m[39m[1m[31md[0m[39m[90mocker container ls[39m[18D[0m[33md[33mo[39m[1m[31md[1m[31mo[1m[31mc[0m[39m[1m[31mc[1m[31mk[0m[39m[1m[31mk[1m[31me[0m[39m[0m[32md[0m[32mo[0m[32mc[0m[32mk[0m[32me[32mr[39m[39m [39me[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [11D[90mxec -it 74 bash[39m[15D[39mx[39me[39mc[39m [39m-[39mi[39mt[39m [39m7[39m4[39m [39m[4mb[24m[24mb[39ma[39ms[39mh[?1l>[?2004l[?1l>
+root@7493b46b8610:/# [Kroot@7493b46b8610:/# mongosh -u root -p exm ample
+]0;mongosh mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	63986124157a88330bb96cfa
+Connecting to:		[1m[32mmongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.1[0m
+Using MongoDB:		6.0.3
+[1m[33mUsing Mongosh[0m:		1.6.1
+
+For mongosh info see: [1mhttps://docs.mongodb.com/mongodb-shell/[0m
+
+[1G[0J [1G[1m[33m------[0m
+   [1m[33mThe server generated these startup warnings when booting[0m
+   2022-12-13T11:15:41.696+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2022-12-13T11:15:42.351+00:00: /sys/kernel/mm/transparent_hugepage/enabled is 'always'. We suggest setting it to 'never'
+   2022-12-13T11:15:42.351+00:00: vm.max_map_count is too low
+[1m[33m------[0m
+
+[1m[33m------[0m
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+   
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+   
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+[1m[33m------[0m
+
+[1G[0Jtest> [7Gshow dbs
+[1madmin[0m         100.00 KiB
+[1mconfig[0m         72.00 KiB
+[1mlocal[0m          72.00 KiB
+[1mthe_database[0m   72.00 KiB
+[1G[0Jtest> [7Guse the_database
+switched to db the_database
+[1G[0Jthe_database> [15Gshow tor[1G[0Jthe_database> show to[22Gdo[1G[0Jthe_database> show tod[23G[1G[0Jthe_database> show to[22G[1G[0Jthe_database> show t[21G[1G[0Jthe_database> show [20G[1G[0Jthe_database> show[19G[1G[0Jthe_database> sho[18G[1G[0Jthe_database> sh[17G[1G[0Jthe_database> s[16G[1G[0Jthe_database> [15Gshow collections
+[1mtodos[0m
+[1G[0Jthe_database> [15Gdb.todos.find({})
+[
+  {
+    _id: ObjectId("638cd5b151892b3c7cb44104"),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId("638cd5b151892b3c7cb44105"),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  { _id: ObjectId("6397582ce9c7130e576f9eb4"), done: [33mfalse[39m, __v: [33m0[39m },
+  { _id: ObjectId("63975833e9c7130e576f9eb6"), done: [33mfalse[39m, __v: [33m0[39m },
+  {
+    _id: ObjectId("63975834e9c7130e576f9eb8"),
+    done: [33mtrue[39m,
+    __v: [33m0[39m,
+    text: [32m'Diibadee'[39m
+  },
+  {
+    _id: ObjectId("6398605694fa4f6b23be1d18"),
+    text: [32m'Testing'[39m,
+    done: [33mtrue[39m
+  }
+]
+[1G[0Jthe_database> [15Gdb.todos.insertOne({
+[1G[0J... [5Gtext: [32m'[39m[32mI[39m[32mn[39m[32mc[39m[32mr[39m[32me[39m[32ma[39m[32ms[39m[32me[39m [32mt[39m[32mh[39m[32me[39m [32mn[39m[32mu[39m[32mm[39m[32mb[39m[32me[39m[32mr[39m [32mo[39m[32mf[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32ms[39m [32mi[39m[32mn[39m [32mm[39m[32my[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32mb[39m[32me[39m[32ml[39m[32mt[39m[32m'[39m,
+[1G[0J... [5Gd[36mdo[39mdone: fals[33mfalse[39m
+[1G[0J... [5G})
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId("63986166ad5f7088f63a0a16")
+}
+[1G[0Jthe_database> [15Gdb.todos.find({})
+[
+  {
+    _id: ObjectId("638cd5b151892b3c7cb44104"),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId("638cd5b151892b3c7cb44105"),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  { _id: ObjectId("6397582ce9c7130e576f9eb4"), done: [33mfalse[39m, __v: [33m0[39m },
+  { _id: ObjectId("63975833e9c7130e576f9eb6"), done: [33mfalse[39m, __v: [33m0[39m },
+  {
+    _id: ObjectId("63975834e9c7130e576f9eb8"),
+    done: [33mtrue[39m,
+    __v: [33m0[39m,
+    text: [32m'Diibadee'[39m
+  },
+  {
+    _id: ObjectId("6398605694fa4f6b23be1d18"),
+    text: [32m'Testing'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId("63986166ad5f7088f63a0a16"),
+    text: [32m'Increase the number of tools in my toolbelt'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gexit
+root@7493b46b8610:/# exit
+exit
+[1m[7m%[27m[1m[0m                                                                                          ]0;roni@torni: ~/kurssit/fs-containers/todo-app/todo-backend[0m[27m[24m[J[7m[36m ~/k/f/t/todo-backend [27m[36m[7m[32m[46m[49m  main [27m[32m[49m[32m[39m [K[?1h=[?1h=[?2004h[1m[31me[0m[39m[1m[31me[0m[39m[90mxit[39m[0m[32me[32mx[39m[1m[31me[1m[31mx[1m[31mi[0m[39m[0m[32me[0m[32mx[0m[32mi[32mt[39m[?1l>[?2004l[?1l>
+
+Script done on 2022-12-13 13:27:01+02:00 [COMMAND_EXIT_CODE="0"]
