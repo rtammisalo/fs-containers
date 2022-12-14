@@ -7,5 +7,7 @@ services:
     volumes:
       - ./:/usr/src/app
     ports:
-      - 5000:3000
+      - 5000:5000
     container_name: todo-frontend-dev
+  debug-helper:
+    image: busybox
