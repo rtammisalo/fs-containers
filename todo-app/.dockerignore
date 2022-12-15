@@ -1,0 +1,4 @@
+.dockerignore
+docker-compose.dev.yml
+todo-backend/redis_data/
+todo-backend/mongo_data/

@@ -4,4 +4,6 @@ services:
     image: todo-backend
     build: .
     ports:
-        - 3000:3000
+      - 3000:3001
+    environment:
+      - PORT=3001

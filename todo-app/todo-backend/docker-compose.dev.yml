@@ -9,8 +9,9 @@ services:
     volumes:
       - ./:/usr/src/app
     ports:
-      - 3000:3000
+      - 3000:3001
     environment:
+      - PORT=3001
       - REDIS_URL=//redis:6379
       - MONGO_URL=mongodb://the_username:the_password@mongo:27017/the_database
   mongo:
