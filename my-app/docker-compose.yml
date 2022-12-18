@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  library-frontend:
+    image: library-frontend
+    build:
+      context: ./frontend/
+      dockerfile: Dockerfile
+    ports:
+      - 3000:80
+    container_name: library-frontend
+  library-backend:
+    image: library-backend
+    build:
+      context: ./backend/
+      dockerfile: Dockerfile
+    ports:
+      - 4000:4000
+    environment:
+      - NODE_ENV=production
+    container_name: library-backend
