@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  library-frontend:
+    image: library-frontend-dev
+    build:
+      context: ./frontend/
+      dockerfile: dev.Dockerfile
+    volumes:
+      - ./frontend/:/usr/src/app
+    ports:
+      - 3000:3000
+    container_name: library-frontend-dev
+  library-backend:
+    image: library-backend-dev
+    build:
+      context: ./backend/
+      dockerfile: dev.Dockerfile
+    volumes:
+      - ./backend/:/usr/src/app
+    ports:
+      - 4000:4000
+    container_name: library-backend-dev
